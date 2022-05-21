@@ -3,7 +3,7 @@ package database_connector;
 import java.sql.*;
 
 public class JDBC {
-    public static void main(String[] args) {
+    public void printUsers() throws SQLException {
         Connection conn = getConnection();
         try {
             Statement statement = conn.createStatement();
@@ -18,7 +18,7 @@ public class JDBC {
         } catch (SQLException e) {
             System.out.println("Could not retrieve data from the database " + e.getMessage());
         }
-        
+        conn.close();
     }
     static Connection getConnection() {
         try {
