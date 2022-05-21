@@ -36,7 +36,7 @@ public class Menu {
                 }
                 
             } catch (Exception e) {
-                System.out.println("Pls try again");
+                System.out.println("pls send help");
             }
         }
     }
